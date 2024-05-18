@@ -1,0 +1,39 @@
+# Exclude directories that contain Python virtual environments, such as venv or env.
+venv/
+env/
+
+# Ignore compiled Python files (.pyc) and the __pycache__ directory, which stores cached bytecode.
+*.pyc
+__pycache__/
+
+# Exclude environment-specific files, such as .env files that store sensitive or local configuration.
+.env
+.env.*
+*.env
+
+# Ignore dependency management files, such as pip-lock.txt or requirements.txt, as they can be easily regenerated.
+pip-lock.txt
+requirements.txt
+
+# Exclude files and directories specific to IDEs or editors, such as .vscode, .idea, .sublime-project, and .sublime-workspace. Also, exclude any editor-specific files like .pyc files.
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.pyc
+
+# Ignore log files, database files, and generated files like CSV or Excel files.
+*.log
+*.sqlite
+*.db
+*.csv
+*.xlsx
+
+# Exclude OS-specific files like .DS_Store on macOS or Thumbs.db on Windows.
+.DS_Store
+Thumbs.db
+
+# Ignore other common files like optimized Python files (.pyo), Python extension modules (.pyd), or swap files (.swp).
+*.pyo
+*.pyd
+*.swp
