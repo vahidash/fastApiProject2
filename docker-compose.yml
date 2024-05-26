@@ -3,9 +3,9 @@
 services:
   api:
     build: .
+    command: uvicorn main:app --reload --host 0.0.0.0 --port 8000
+    # command: fastapi dev /usr/src/app/app/main.py
     ports:
-      -8000:8000
-    # env_file:
-    #   - ./.env
-    # environment:
-    #   - name=value
+      - 8000:8000
+    volumes:
+      - ./:/usr/src

@@ -1,6 +1,6 @@
-FROM python:3.13.0
-WORKDIR /usr/src/app
-COPY requirement.txt ./
-RUN pip install -r requirement.txt
+FROM python:3.10.1-slim-buster
+WORKDIR /usr/src
+COPY requirements.txt ./
+RUN pip install -r requirements.txt
 COPY . .
-CMD [ "uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000" ]
+# CMD [ "uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000" ]
