@@ -13,3 +13,5 @@ def test_read_main():
 
 def test_read_posts():
     response = client.get("/posts")
+    assert response.status_code == 200
+    assert response.json() == {"data": "This is a post."}
