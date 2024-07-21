@@ -19,5 +19,6 @@ def test_read_posts():
 
 def test_create_post():
     response = client.post("/posts", json={"title": "t1", "content": "c1"})
-    assert response.status_code == 200
+    print(response.json())
+    assert response.status_code == 201
     assert response.json() == {"title": "t1", "content": "c1"}
