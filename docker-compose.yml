@@ -3,9 +3,15 @@
 services:
   api:
     build: .
-    command: uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
-    # command: fastapi dev /usr/src/app/app/main.py
+
     ports:
       - 8000:8000
+
     volumes:
       - ./:/usr/src
+
+    # command: python -m pytest
+    # command: fastapi run app/main.py --port 8000
+    # command: fastapi dev /usr/src/app/main.py
+    # command: uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+    
